@@ -1,11 +1,10 @@
 import React from 'react';
+import UserHobbiesContainer from './containers/UserHobbiesContainer';
 
 const App = () => (
-    <div className="App">
-      <header className="header-container">
-        Inbox
-      </header>
-    </div>
+  <div className="App">
+    <UserHobbiesContainer />
+  </div>
 );
 
 export default App;

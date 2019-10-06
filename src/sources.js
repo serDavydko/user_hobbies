@@ -1,8 +1,42 @@
-export const ADRESS = 'https://fmail.flyaps.com/api/v1/mailbox/messages/';
+export const getNames = async() => {
+  const response = await fetch('https://user-hobby-api.herokuapp.com/users');
+  const result = await response.json();
 
-export const getData = async(link) => {
-  const response = await fetch(link);
-  const posts = await response.json();
+  return result;
+};
 
-  return posts;
+export const getHobbies = async() => {
+  const response = await fetch(`https://user-hobby-api.herokuapp.com/hobbies`);
+  const result = await response.json();
+
+  return result;
+};
+
+export const createName = async(name) => {
+  await fetch('https://user-hobby-api.herokuapp.com/users', {
+    method: 'post',
+    body: JSON.stringify(name),
+    headers: {
+      'content-type': 'application/json',
+    },
+  });
+};
+
+export const createHobby = async(body) => {
+  await fetch('https://user-hobby-api.herokuapp.com/hobbies', {
+    method: 'post',
+    body: JSON.stringify(body),
+    headers: {
+      'content-type': 'application/json',
+    },
+  });
+};
+
+export const removeHobby = async(id) => {
+  await fetch(`https://user-hobby-api.herokuapp.com/hobbies/${id}`, {
+    method: 'delete',
+    headers: {
+      'content-type': 'application/json',
+    },
+  });
 };

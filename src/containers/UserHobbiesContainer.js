@@ -28,7 +28,7 @@ const UserHobbiesContainer = () => {
 
   const handleAddHobby = async(e, data) => {
     e.preventDefault();
-    if (Object.keys(data).length >= 3) {
+    if (Object.keys(data).length >= 4) {
       await createHobby(data);
       const dataFromServer = await getHobbies();
 
@@ -68,6 +68,7 @@ const UserHobbiesContainer = () => {
           <DetailsList
             hobbies={hobbies.filter(hobby => hobby.userId === activeUserId)}
             handleRemoveHobby={handleRemoveHobby}
+            activeUserId={activeUserId}
           />
         </div>
       </div>

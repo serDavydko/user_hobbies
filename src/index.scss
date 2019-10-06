@@ -27,7 +27,11 @@
 .user-Input, .user-Input-btn {
   box-sizing: border-box;
   height: 30px;
-  
+}
+
+.informational_message {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .user-Input {
@@ -43,6 +47,7 @@
   right: -40px;
   display: inline-block;
   width: 40px;
+ 
 }
 
 .Detail-input {
@@ -70,6 +75,7 @@
 .DetailsBlock {
   overflow-y: auto;
   width: 100%;
+  margin: 0 4px;
 }
 
 .details-Input-form {
@@ -134,6 +140,17 @@ button {
 p {
   display: inline-block;
   margin: 0;
+  padding: 5px;
+  border: 2px solid #ffffff;
+  font-size: 14px;
+}
+
+.details-item-btn {
+  margin: 6px;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
 }
 
 ul {
@@ -155,32 +172,5 @@ li {
   font-size: 30px;
   font-weight: 500;
   margin: 0 auto;
-  text-align: center;
-}
-
-.link {
-  text-decoration: none;
-  color: black;
-}
-
-.important {
-  color: red;
-  font-weight: 500;
-}
-
-span {
-  margin-right: 12px;
-}
-
-.topic {
-  background-color:grey;
-  color: white;
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-
-.error {
-  color: red;
-  font-size: 20px;
   text-align: center;
 }

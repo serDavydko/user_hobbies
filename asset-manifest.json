@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/user_hobbies/static/css/main.f9d1ad66.chunk.css",
-    "main.js": "/user_hobbies/static/js/main.e449d7c2.chunk.js",
-    "main.js.map": "/user_hobbies/static/js/main.e449d7c2.chunk.js.map",
+    "main.css": "/user_hobbies/static/css/main.ed15dcdf.chunk.css",
+    "main.js": "/user_hobbies/static/js/main.88688f4f.chunk.js",
+    "main.js.map": "/user_hobbies/static/js/main.88688f4f.chunk.js.map",
     "runtime~main.js": "/user_hobbies/static/js/runtime~main.949681cc.js",
     "runtime~main.js.map": "/user_hobbies/static/js/runtime~main.949681cc.js.map",
     "static/js/2.bccd60cf.chunk.js": "/user_hobbies/static/js/2.bccd60cf.chunk.js",
     "static/js/2.bccd60cf.chunk.js.map": "/user_hobbies/static/js/2.bccd60cf.chunk.js.map",
     "index.html": "/user_hobbies/index.html",
-    "precache-manifest.4860755cd38dcca05854f8d575643ab7.js": "/user_hobbies/precache-manifest.4860755cd38dcca05854f8d575643ab7.js",
+    "precache-manifest.d129330a78e895ab3331dcc4335599ef.js": "/user_hobbies/precache-manifest.d129330a78e895ab3331dcc4335599ef.js",
     "service-worker.js": "/user_hobbies/service-worker.js",
-    "static/css/main.f9d1ad66.chunk.css.map": "/user_hobbies/static/css/main.f9d1ad66.chunk.css.map"
+    "static/css/main.ed15dcdf.chunk.css.map": "/user_hobbies/static/css/main.ed15dcdf.chunk.css.map"
   }
 }

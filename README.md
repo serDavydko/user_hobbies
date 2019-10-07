@@ -9,4 +9,4 @@ Code in `src/` directory.
 
 ### Demo link
 
-Add link here: [DEMO LINK](https://serdavydko.github.io/user_hobbies/)
+App available via [this link](https://serdavydko.github.io/user_hobbies/)

@@ -29,11 +29,6 @@
   height: 30px;
 }
 
-.informational_message {
-  margin-top: 20px;
-  text-align: center;
-}
-
 .user-Input {
   width: 100%;
   &-form {
@@ -41,13 +36,18 @@
     margin-right: 40px;
   }
 }
+
 .user-Input-btn {
   position: absolute;
   top: 0;
   right: -40px;
   display: inline-block;
   width: 40px;
- 
+}
+
+.informational_message {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .Detail-input {
@@ -76,11 +76,6 @@
   overflow-y: auto;
   width: 100%;
   margin: 0 4px;
-}
-
-.details-Input-form {
-  position: relative;
-  margin-right: 39px;
 }
 
 .Detail-input-btn {
@@ -119,6 +114,21 @@
       box-sizing: border-box;
     }
   }
+  &-btn {
+    position: absolute;
+    top:0;
+    right: 0;
+    margin: 6px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+  }
+}
+
+.details-Input-form {
+  position: relative;
+  margin-right: 39px;
 }
 
 input[type=submit] {
@@ -167,39 +177,7 @@ p {
   text-overflow: ellipsis;
 }
 
-.details-item-btn {
-  position: absolute;
-  top:0;
-  right: 0;
-  margin: 6px;
-  color: white;
-  background-color: red;
-  border: none;
-  border-radius: 50%;
-}
-
 ul {
   margin: 0 auto;
   padding-left: 0;
-}
-
-li {
-  list-style-type: none;
-  background-color: white;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.header-container {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 30px;
-  font-weight: 500;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.grey-option {
-  color: grey;
 }

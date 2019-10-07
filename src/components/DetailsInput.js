@@ -7,21 +7,23 @@ const DetailsInput = ({ handleAddHobby, activeUserId }) => {
   };
 
   return (
-    <form className="details-Input-form" onSubmit={e => handleAddHobby(e, { ...value, userId: activeUserId }, setValue({}))}>
-      <input
+    <form
+      className="details-Input-form"
+      onSubmit={e => handleAddHobby(e, { ...value, userId: activeUserId }, setValue({}))}
+    >
+      <select
         className="Detail-input-passion"
         onChange={e => handleChange(e)}
         placeholder="Enter user passion"
-        list="passion"
         value={value.passion || ''}
         name="passion"
-      />
-      <datalist id="passion">
-        <option value="Low" />
-        <option value="Medium" />
-        <option value="High" />
-        <option value="Very-High" />
-      </datalist>
+      >
+        <option value="">Enter user passion</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+        <option value="Very-High">Very-High</option>
+      </select>
       <input
         className="Detail-input-hobby"
         onChange={e => handleChange(e)}

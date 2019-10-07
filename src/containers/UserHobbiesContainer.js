@@ -12,6 +12,21 @@ const UserHobbiesContainer = () => {
   const [hobbies, setHobbies] = useState([]);
   const [activeUserId, setActiveUserId] = useState('');
 
+  const handleConfirmRemove = (id) => {
+    setHobbies(
+      hobbies.map((hobby) => {
+        if (hobby.id !== id) {
+          return hobby;
+        }
+
+        return {
+          ...hobby,
+          confirmRemove: !hobby.confirmRemove,
+        };
+      })
+    );
+  };
+
   const handleCreateUser = async(e, data) => {
     e.preventDefault();
     if (Object.keys(data).length >= 1) {
@@ -30,30 +45,28 @@ const UserHobbiesContainer = () => {
     e.preventDefault();
     if (Object.keys(data).length >= 4) {
       await createHobby(data);
-      const dataFromServer = await getHobbies();
+      const hobbiesFromServ = await getHobbies();
 
-      setHobbies(dataFromServer);
+      setHobbies(hobbiesFromServ.map(hobby => ({ ...hobby, confirmRemove: false })));
     }
   };
 
-  const handleRemoveHobby = async id => {
+  const handleRemoveHobby = async(id) => {
     await removeHobby(id);
-    const dataFromServer = await getHobbies();
+    const hobbiesFromServ = await getHobbies();
 
-    setHobbies(dataFromServer);
+    setHobbies(hobbiesFromServ.map(hobby => ({ ...hobby, confirmRemove: false })));
   };
 
   useEffect(() => {
-    (async () => {
-      const dataFromServer = await getNames();
-      const dataFromServ = await getHobbies();
+    (async() => {
+      const namesFromServer = await getNames();
+      const hobbiesFromServ = await getHobbies();
 
-      setNames(dataFromServer);
-      setHobbies(dataFromServ);
+      setNames(namesFromServer);
+      setHobbies(hobbiesFromServ.map(hobby => ({ ...hobby, confirmRemove: false })));
     })();
   }, []);
-
-  console.log(activeUserId);
 
   return (
     <section className="UserHobbiesContainer">
@@ -61,13 +74,21 @@ const UserHobbiesContainer = () => {
       <div className="content-folder">
         <div className="UsersBlock">
           <UsersInput handleCreateUser={handleCreateUser} />
-          <UsersList handleChangeActive={handleChangeActive} names={names} activeUserId={activeUserId}/>
+          <UsersList
+            handleChangeActive={handleChangeActive}
+            names={names}
+            activeUserId={activeUserId}
+          />
         </div>
         <div className="DetailsBlock">
-          <DetailsInput handleAddHobby={handleAddHobby} activeUserId={activeUserId} />
+          <DetailsInput
+            handleAddHobby={handleAddHobby}
+            activeUserId={activeUserId}
+          />
           <DetailsList
             hobbies={hobbies.filter(hobby => hobby.userId === activeUserId)}
             handleRemoveHobby={handleRemoveHobby}
+            handleConfirmRemove={handleConfirmRemove}
             activeUserId={activeUserId}
           />
         </div>

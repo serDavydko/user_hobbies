@@ -59,7 +59,11 @@ const DetailsList = ({
     );
   }
 
-  return null;
+  return (
+    <div className="informational_message">
+    Choose user for view details
+  </div>
+  );
 };
 
 export default DetailsList;
